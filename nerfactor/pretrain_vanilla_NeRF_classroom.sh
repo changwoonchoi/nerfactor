@@ -5,7 +5,7 @@ gpus='4'
 repo_dir='/home/ccw/project/cloned_repos/nerfactor'
 data_root="/home/ccw/project/cloned_repos/nerfactor/data/IBL-NeRF/${scene}"
 
-imh='512'
+imh='360'
 lr='5e-4'
 
 near='0'; far='151.36'
