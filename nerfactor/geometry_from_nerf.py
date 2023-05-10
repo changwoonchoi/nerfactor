@@ -78,7 +78,7 @@ def main(_):
     # Restore model
     model = restore_model(config, latest_ckpt)
 
-    for mode in ('train', 'vali', 'test'):
+    for mode in ('train', 'test'):
         # Make datapipe
         n_views, datapipe = make_datapipe(config, mode)
 
