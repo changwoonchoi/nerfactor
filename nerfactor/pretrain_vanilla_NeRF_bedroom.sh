@@ -1,7 +1,7 @@
 #!/usr/bin/env/bash
 
 scene='bedroom'
-gpus='0'
+gpus='1'
 repo_dir='/home/ccw/project/cloned_repos/nerfactor'
 data_root="/home/ccw/project/cloned_repos/nerfactor/data/IBL-NeRF/${scene}"
 
