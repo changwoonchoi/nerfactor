@@ -1,7 +1,7 @@
 #!/usr/bin/env/bash
 
 scene="veach-ajar"
-gpus='4'
+gpus='3'
 repo_dir='/home/ccw/project/cloned_repos/nerfactor'
 data_root="/home/ccw/project/cloned_repos/nerfactor/data/IBL-NeRF/${scene}"
 
