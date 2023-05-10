@@ -156,15 +156,19 @@ class Dataset(BaseDataset):
         # Training or validation, where each camera has a paired image
         img_path = self.meta2img[metadata_path]
         rgba = xm.io.img.load(img_path)
-        assert rgba.ndim == 3 and rgba.shape[2] == 4, "Input image is not RGBA"
-        rgba = xm.img.normalize_uint(rgba)
-        # Resize RGB
-        if imh != rgba.shape[0]:
-            rgba = xm.img.resize(rgba, new_h=imh)
-        rgb, alpha = rgba[:, :, :3], rgba[:, :, 3]
-        # Composite RGBA image onto white or black background
-        bg = np.ones_like(rgb) if white_bg else np.zeros_like(rgb)
-        rgb = imgutil.alpha_blend(rgb, alpha, tensor2=bg)
+        # assert rgba.ndim == 3 and rgba.shape[2] == 4, "Input image is not RGBA"
+        if rgba.ndim == 3 and rgba.shape[2] == 4:
+            rgba = xm.img.normalize_uint(rgba)
+            # Resize RGB
+            if imh != rgba.shape[0]:
+                rgba = xm.img.resize(rgba, new_h=imh)
+            rgb, alpha = rgba[:, :, :3], rgba[:, :, 3]
+            # Composite RGBA image onto white or black background
+            bg = np.ones_like(rgb) if white_bg else np.zeros_like(rgb)
+            rgb = imgutil.alpha_blend(rgb, alpha, tensor2=bg)
+        elif rgba.ndim == 3 and rgba.shape[2] == 3:
+            rgb = xm.img.normalize_uint(rgba)
+
         rgb = rgb.astype(np.float32)
         return id_, rayo, rayd, rgb
 

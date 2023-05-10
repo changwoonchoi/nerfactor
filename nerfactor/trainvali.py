@@ -85,7 +85,7 @@ def main(_):
     datapipe_train = strategy.experimental_distribute_dataset(datapipe_train)
 
     # Make validation dataset
-    dataset_vali = Dataset(config, 'vali', debug=FLAGS.debug)
+    dataset_vali = Dataset(config, 'test', debug=FLAGS.debug)
     global_bs_vali = dataset_vali.bs # maybe different from training
     try:
         datapipe_vali = dataset_vali.build_pipeline(no_batch=no_batch)
