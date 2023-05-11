@@ -2,7 +2,7 @@
 
 scene='classroom'
 gpus='4'
-proj_root='/home/ccw/cloned_repos/nerfactor'
+proj_root='/home/ccw/project/cloned_repos/nerfactor'
 repo_dir="$proj_root"
 data_root="$repo_dir/data/IBL-NeRF/${scene}"
 imh='360'
