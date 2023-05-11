@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-scene='kitchen'
+scene='kitchen_no_transparent'
 gpus='0'
 proj_root='/home/ccw/cloned_repos/nerfactor'
 repo_dir="$proj_root"
