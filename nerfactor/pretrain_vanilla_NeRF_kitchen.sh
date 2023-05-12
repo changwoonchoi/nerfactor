@@ -1,6 +1,6 @@
 #!/usr/bin/env/bash
 
-scene="kitchen_no_transparent"
+scene="kitchen"
 gpus='4,5,6,7'
 repo_dir='/home/ccw/project/cloned_repos/nerfactor'
 data_root="/home/ccw/project/cloned_repos/nerfactor/data/IBL-NeRF/${scene}"
