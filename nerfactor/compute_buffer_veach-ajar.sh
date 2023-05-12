@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 scene='veach-ajar'
-gpus='3'
-proj_root='/home/ccw/cloned_repos/nerfactor'
+gpus='7'
+proj_root='/home/ccw/project/cloned_repos/nerfactor'
 repo_dir="$proj_root"
 data_root="$repo_dir/data/IBL-NeRF/${scene}"
 imh='360'
@@ -13,5 +13,5 @@ occu_thres='0.5'
 scene_bbox='-14,14,-14,14,-14,14'
 
 out_root="$proj_root/output/surf/$scene"
-mlp_chunk='375000'
+mlp_chunk='1000000'
 REPO_DIR="$repo_dir" "$repo_dir/nerfactor/geometry_from_nerf_run.sh" "$gpus" --data_root="$data_rot" --trained_nerf="$trained_nerf" --out_root="$out_root" --imh="$imh" --scene_bbox="$scene_bbox" --occu_thres="$occu_thres" --mlp_chunk="$mlp_chunk"
