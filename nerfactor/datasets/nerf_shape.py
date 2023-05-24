@@ -162,9 +162,9 @@ class Dataset(BaseDataset):
         else:
             # Training or validation, where each camera has a paired image
             rgba = xm.io.img.load(paths['rgba'])
-            assert rgba.ndim == 3 and rgba.shape[2] == 4, \
-                "Input image is not RGBA"
-            rgba = xm.img.normalize_uint(rgba)
+            # assert rgba.ndim == 3 and rgba.shape[2] == 4, "Input image is not RGBA"
+            if rgba.ndim == 2:
+                rgba = xm.img.normalize_uint(rgba)
             rgb = rgba[:, :, :3]
             if use_nerf_alpha: # useful for real scenes
                 alpha = xm.io.img.load(paths['alpha'])
