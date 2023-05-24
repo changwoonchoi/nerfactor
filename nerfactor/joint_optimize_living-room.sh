@@ -1,14 +1,14 @@
-scene='bathroom'
-gpus='0'
+scene='living-room'
+gpus='1'
 model='nerfactor'
 overwrite='True'
-proj_root='/home/ccw/project/cloned_repos/nerfactor'
+proj_root='/home/ccw/cloned_repos/nerfactor'
 repo_dir="$proj_root"
 
 data_root="$proj_root/data/IBL-NeRF/$scene"
 
-imh='512'
-near='0.03'; far='3.9'
+imh='360'
+near='0.1'; far='6.340'
 
 use_nerf_alpha='True'
 
