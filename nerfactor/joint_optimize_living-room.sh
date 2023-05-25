@@ -1,3 +1,5 @@
+#!/usr/bin/env/bash
+
 scene='living-room'
 gpus='1'
 model='nerfactor'

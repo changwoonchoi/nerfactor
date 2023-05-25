@@ -1,16 +1,16 @@
 #!/usr/bin/env/bash
 
-scene='kitchen_no_transparent'
-gpus='2'
+scene='veach-ajar'
+gpus='1'
 model='nerfactor'
 overwrite='True'
-proj_root='/home/ccw/project/cloned_repos/nerfactor'
+proj_root='/home/ccw/cloned_repos/nerfactor'
 repo_dir="$proj_root"
 
 data_root="$proj_root/data/IBL-NeRF/$scene"
 
 imh='360'
-near='0.1'; far='6.340'
+near='0.5615'; far='13.8917'
 
 use_nerf_alpha='True'
 
