@@ -9,7 +9,7 @@ repo_dir="$proj_root"
 
 data_root="$proj_root/data/IBL-NeRF/$scene"
 
-imh='360'
+imh='640'
 near='0.02'; far='12.19'
 
 use_nerf_alpha='True'
