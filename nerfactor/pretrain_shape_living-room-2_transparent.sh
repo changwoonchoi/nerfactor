@@ -1,7 +1,7 @@
 #!/usr/bin/env/bash
 
-scene='bathroom'
-gpus='0'
+scene='living-room-2_transparent'
+gpus='1'
 model='nerfactor'
 overwrite='True'
 proj_root='/home/ccw/cloned_repos/nerfactor'
@@ -9,8 +9,8 @@ repo_dir="$proj_root"
 
 data_root="$proj_root/data/IBL-NeRF/$scene"
 
-imh='512'
-near='0.03'; far='3.9'
+imh='360'
+near='0.39'; far='7.049'
 
 use_nerf_alpha='True'
 
