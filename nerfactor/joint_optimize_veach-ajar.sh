@@ -4,7 +4,7 @@ scene='veach-ajar'
 gpus='1'
 model='nerfactor'
 overwrite='True'
-proj_root='/home/ccw/cloned_repos/nerfactor'
+proj_root='/home/ccw/project/cloned_repos/nerfactor'
 repo_dir="$proj_root"
 
 data_root="$proj_root/data/IBL-NeRF/$scene"
